@@ -1,0 +1,24 @@
+<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Facebook Application</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+
+</head>
+
+<body>
+<h3>Connect to Facebook: </h3>
+
+<form action="/connect/facebook" method="POST">
+    <input type="hidden" name="scope" value="user_posts"/>
+    <div class="formInfo">
+        <p>You're not connected to Facebook. Please click the login button below.</p>
+    </div>
+    <button>
+    <a th:href="@{${loginUrl}}">Login Via a Facebook</a>
+    </button>
+</form>
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+
+</html>
